@@ -1,0 +1,34 @@
+int mooving(t_num **pile_a, t_num **pile_b)
+{
+    t_num *cmp;
+    int count;
+
+    count = 0;
+    cmp = pile_a[0]->next;
+    while (my_lstlen(pile_a))
+    {
+        while (pile_a[0]->num > cmp->num && cmp != NULL)
+        {
+            pb(pile_a, pile_b);
+            cmp = pile_a[0]->next;
+            count++;
+        }
+        pb(pile_a, pile_b);
+        // cmp = pile_a[0]->next;
+        count++;
+    }
+    // print_b(pile_b);
+    cmp = pile_b[0]->next;
+    while (my_lstlen(pile_b) > 1)
+    {
+        while (cmp != NULL && pile_b[0]->num < cmp->num)
+        {
+            pa(pile_a, pile_b);
+            cmp = pile_b[0]->next;
+            count++;
+        }
+        sb(pile_b);
+        // ft_printf("%d\n", my_lstlen(pile_b));
+    }
+    return (count);
+}
