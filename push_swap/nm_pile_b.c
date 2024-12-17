@@ -61,7 +61,7 @@ int nm_big(t_num *pile, int big)
     if (big >= my_lstlen(&pile) / 2)
         return (big - my_lstlen(&pile) + 1);
     else
-        return (big);
+        return (big + 1);
 }
 //fonction a la quel on va envoyer le numero a comparer pour savoir sy
 //c'est celui avec le moins de mouvemenet
