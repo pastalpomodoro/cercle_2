@@ -73,11 +73,11 @@ int nm_pile_b(int n, t_num **pile_b)
     small = 0;
     big = 0;
     if (if_smaller(*pile_b, n) == 1) // gerer le cas ou c est le plus petit et ou c est le plus grand 
-        small = find_index_smaller(*pile_b);
+        return (nm_big(*pile_b, find_index_upper(*pile_b, n)));
     else
         small = find_index_under(*pile_b, n);
     if (if_bigger(*pile_b, n) == 1)
-        big = find_index_biggher(*pile_b);
+        return (nm_small(*pile_b, find_index_under(*pile_b, n)));
     else
         big = find_index_upper(*pile_b, n);
     big = nm_big(*pile_b, big);

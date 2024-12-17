@@ -45,7 +45,7 @@ int if_bigger(t_num *pile, int n);
 int find_index_smaller(t_num *pile);
 int find_index_biggher(t_num *pile);
 
-int nm_pile_b(int n, t_num **pile_b);
+int find_mediane(t_num *pile_a);
 
 void test(t_num **pile_a, t_num **pile_b);
 

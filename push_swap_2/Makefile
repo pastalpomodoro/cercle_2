@@ -3,7 +3,7 @@ NAME = push_swap
 CC = cc
 FLAG = -Wall -Werror -Wextra -g3
 
-FILE = nm_pile_b.c algo_utils.c testeur.c moove/r_rotate.c moove/rotate.c moove/place_to.c moove/swap_a_b.c utils_lst.c parsing.c push_swap.c
+FILE = find_mediane.c algo_utils.c testeur.c moove/r_rotate.c moove/rotate.c moove/place_to.c moove/swap_a_b.c utils_lst.c parsing.c push_swap.c
 
 OBJ_PATH = Bin/
 OBJ = $(addprefix $(OBJ_PATH), $(FILE:.c=.o))
