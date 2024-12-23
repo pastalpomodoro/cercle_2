@@ -80,5 +80,5 @@ void test(t_num **pile_a, t_num **pile_b)
     count = p_to_b(pile_a, pile_b);
     // ft_printf("\n");
     print(*pile_a);
-    // ft_printf("COUNT: %d", count);
+    ft_printf("COUNT: %d", count);
 }
