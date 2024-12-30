@@ -69,3 +69,9 @@ t_num	*my_ft_lstnew(int num)
 	new->next = NULL;
 	return (new);
 }
+int lst_last(t_num *pile)
+{
+    while (pile->next)
+        pile = pile->next;
+    return (pile->num);
+}

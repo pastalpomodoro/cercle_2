@@ -1,10 +1,17 @@
 #include "push_swap.h"
 
-int absolue(int n)
+int find_index(t_num *pile, int num)
 {
-    if (n < 0)
-        return (-n);
-    return (n);
+    int i;
+
+    i = 0;
+    while (pile)
+    {
+        if (pile->num == num)
+            return (i);
+        pile = pile->next;
+    }
+    return (-1);
 }
 // fonction qui permet de comprendre sy le numero passe en parametre est le plus petit de toute la pile
 int if_smaller(t_num *pile, int n)
