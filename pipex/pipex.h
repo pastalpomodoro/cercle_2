@@ -11,5 +11,6 @@
 //utils
 void ft_free(char **tab);
 int size_double_tab(char **tab);
+char **add_bin(char **no_bin);
 
 #endif

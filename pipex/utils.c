@@ -18,3 +18,18 @@ void ft_free(char **tab)
         free(tab[--i]);
     free(tab);
 }
+char **add_bin(char **no_bin)
+{
+    int size;
+    int i;
+    char **commands;
+
+    i = 0;
+    size = size_double_tab(no_bin);
+    commands = malloc(sizeof(char *) * (size + 1));
+    commands[i] = ft_strjoin("/bin/", no_bin[i]);
+    while (++i, no_bin[i])
+        commands[i] = ft_strdup(no_bin[i]);
+    commands[i] = NULL;
+    return (commands);
+}
